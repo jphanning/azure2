@@ -1,0 +1,42 @@
+{
+  "$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+  "contentVersion": "1.0.0.0",
+  "parameters": {
+    "virtualNetworkSettings": {
+      "value": {
+        "name": "i2-vnet",
+        "resourceGroup": "i2-public-dmz-network-rg",
+        "addressPrefixes": [
+          "10.92.0.0/20"
+        ],
+        "subnets": [
+          {
+            "name": "GatewaySubnet",
+            "addressPrefix": "10.0.255.224/27"
+          },
+          {
+            "name": "mgmt",
+            "addressPrefix": "10.92.1.0/20"
+          },
+          {
+            "name": "public-dmz-in",
+            "addressPrefix": "10.92.13.0/20"
+          },
+          {
+            "name": "public-dmz-out",
+            "addressPrefix": "10.92.12.0/20"
+          },
+          {
+            "name": "web",
+            "addressPrefix": "10.92.11.0/20"
+          },
+          {
+            "name": "inf",
+            "addressPrefix": "10.0.10.0/20"
+          }
+        ],
+        "dnsServers": [ ]
+      }
+    }
+  }
+}
